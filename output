@@ -1,0 +1,13 @@
+nohup: ignoring input
+[0mGET / [36m304 [0m8.828 ms - -[0m
+[0mGET /style.css [36m304 [0m1.767 ms - -[0m
+[0mGET /img/weather.svg [36m304 [0m0.825 ms - -[0m
+[0mGET /getword?q=do [36m304 [0m183.765 ms - -[0m
+[0mGET /getword?q=dog [36m304 [0m83.939 ms - -[0m
+[0mGET /getword?q=do [36m304 [0m75.907 ms - -[0m
+[0mGET / [32m200 [0m3.656 ms - 4153[0m
+[0mGET /style.css [36m304 [0m0.809 ms - -[0m
+[0mGET /img/weather.svg [36m304 [0m0.767 ms - -[0m
+[0mGET /getword?q=do [36m304 [0m188.490 ms - -[0m
+[0mGET /getword?q=dog [36m304 [0m77.990 ms - -[0m
+[0mGET /getword?q=do [36m304 [0m78.524 ms - -[0m
