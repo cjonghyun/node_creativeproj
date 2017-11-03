@@ -1,0 +1,7 @@
+nohup: ignoring input
+[0mGET / [32m200 [0m9.289 ms - 2438[0m
+[0mGET /style.css [36m304 [0m1.596 ms - -[0m
+[0mGET / [32m200 [0m6.448 ms - 2468[0m
+[0mGET /style.css [36m304 [0m0.471 ms - -[0m
+[0mGET /trends?q=TRUMP [32m200 [0m717.307 ms - 4550[0m
+[0mGET /trends?q=TRUMP [36m304 [0m289.700 ms - -[0m

@@ -2,7 +2,7 @@
     <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">    
-    <title>Weather and Stack Exchange</title>
+    <title>Trends in the world</title>
     <script
       src="http://code.jquery.com/jquery-3.2.1.min.js"
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -12,34 +12,42 @@
     <body>
     <form>
         <h2>            
-          <img src="http://www.keywordxp.com/wp-content/uploads/2015/12/google-trends.jpg" alt="weather" >
-	  Enter a keyword to look at
+          <img src="http://www.how-to-draw-cartoons-online.com/image-files/xcartoon_earth.gif.pagespeed.ic.g2euG7YML-.webp" alt="weather" >
+	  Enter a keyword to look at WHAT'S HAPPENING IN THE WORLD
         </h2>
-    <input type="text" id="keyword" value=""><br>
+     <p > <small>Powerd by Google Trends </small> </p>
+     <input type="text" id="keyword" value="" size="40" placeholder="Enter a keyword for trend">
 
     <input id="keywordButton" type="submit" value="Submit">    
 
     <br>
-    <p>Google Trends</p>
+
     <div id="trends"></div>
    <script>
+   $("#keyword").keyup(function(event){
+     if(event.keyCode ==13){
+       $("#keywordButton").click();
+     }
+     
+
+   });
    $("#keywordButton").click(function(e){
-            var value = $("#cityField").val();
-            console.log(value);
-            $("#displayCity").val(value);
+            
+            
+           
             e.preventDefault();
             var url = "http://ec2-52-14-104-113.us-east-2.compute.amazonaws.com:3001/trends?q="+$("#keyword").val();
             $.getJSON(url,function(data) {
-              var everything;
-              everything = "<ul>";
+              var everything = "<div class='progress'>";
+              everything = "<ol>";
 	      data = data.default;
 		
         console.log(data.geoMapData);
-              $.each(data.geoMapData, function(i,item) {
-		console.log(item);
-                everything += "<li> "+item.geoName + "  " + item.value;
+	        $.each(data.geoMapData, function(i,item) {
+	          if(i < 10)
+                     everything += "<li> "+item.geoName + "<div class='progress-bar progress-bar-info' role='progressbar' aria-valuenow= " + item.value + " aria-valuemin='0' aria-valuemax='100' style='width:" + item.value + "%'>" + item.value + "</div>";
             });
-          everything += "</ul>";
+          everything += "</div> </ol>";
           $("#trends").html(everything);
             })
         .done(function() { console.log('getJSON request succeeded!'); })
