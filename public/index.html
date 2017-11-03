@@ -1,0 +1,59 @@
+<html>
+    <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">    
+    <title>Weather and Stack Exchange</title>
+    <script
+      src="http://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous">
+    </script>
+   </head>
+    <body>
+    <form>
+        <h2>            
+          <img src="http://www.keywordxp.com/wp-content/uploads/2015/12/google-trends.jpg" alt="weather" >
+	  Enter a keyword to look at
+        </h2>
+    <input type="text" id="keyword" value=""><br>
+
+    <input id="keywordButton" type="submit" value="Submit">    
+
+    <br>
+    <p>Google Trends</p>
+    <div id="trends"></div>
+   <script>
+   $("#keywordButton").click(function(e){
+            var value = $("#cityField").val();
+            console.log(value);
+            $("#displayCity").val(value);
+            e.preventDefault();
+            var url = "http://ec2-52-14-104-113.us-east-2.compute.amazonaws.com:3001/trends?q="+$("#keyword").val();
+            $.getJSON(url,function(data) {
+              var everything;
+              everything = "<ul>";
+	      data = data.default;
+		
+        console.log(data.geoMapData);
+              $.each(data.geoMapData, function(i,item) {
+		console.log(item);
+                everything += "<li> "+item.geoName + "  " + item.value;
+            });
+          everything += "</ul>";
+          $("#trends").html(everything);
+            })
+        .done(function() { console.log('getJSON request succeeded!'); })
+        .fail(function(jqXHR, textStatus, errorThrown) { 
+            console.log('getJSON request failed! ' + textStatus); 
+            console.log("incoming "+jqXHR.responseText);
+        })
+        .always(function() { console.log('getJSON request ended!');
+        });
+          
+        });
+
+        
+    </script>
+    </body>
+    </html>
+    

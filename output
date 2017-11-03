@@ -11,3 +11,53 @@ nohup: ignoring input
 [0mGET /getword?q=do [36m304 [0m188.490 ms - -[0m
 [0mGET /getword?q=dog [36m304 [0m77.990 ms - -[0m
 [0mGET /getword?q=do [36m304 [0m78.524 ms - -[0m
+[0mGET / [32m200 [0m2.944 ms - 4153[0m
+[0mGET /style.css [32m200 [0m0.795 ms - 70[0m
+[0mGET /img/weather.svg [32m200 [0m0.572 ms - 1419[0m
+[0mGET / [36m304 [0m0.677 ms - -[0m
+[0mGET /style.css [36m304 [0m0.387 ms - -[0m
+[0mGET /img/weather.svg [36m304 [0m0.281 ms - -[0m
+[0mGET /getword?q=ra [32m200 [0m136.934 ms - 377[0m
+[0mGET /getword?q=rai [32m200 [0m67.702 ms - 2[0m
+[0mGET /getword?q=rain [32m200 [0m95.417 ms - 234[0m
+[0mGET /getword?q=rain [36m304 [0m84.884 ms - -[0m
+Price
+Providence
+Provo
+[0mGET /getcity?q=pr [32m200 [0m4.397 ms - 57[0m
+Price
+Providence
+Provo
+[0mGET /getcity?q=pr [36m304 [0m1.557 ms - -[0m
+Providence
+Provo
+[0mGET /getcity?q=pro [32m200 [0m0.797 ms - 40[0m
+Provo
+[0mGET /getcity?q=provo [32m200 [0m0.703 ms - 18[0m
+Provo
+[0mGET /getcity?q=provo [36m304 [0m0.685 ms - -[0m
+[0mGET / [32m200 [0m0.668 ms - 4153[0m
+[0mGET /favicon.ico [33m404 [0m10.118 ms - 1016[0m
+[0mGET / [32m200 [0m0.691 ms - 4153[0m
+[0mGET /style.css [32m200 [0m0.457 ms - 70[0m
+[0mGET /img/weather.svg [32m200 [0m0.363 ms - 1419[0m
+[0mGET / [32m200 [0m0.722 ms - 4153[0m
+[0mGET /style.css [32m200 [0m0.476 ms - 70[0m
+[0mGET /img/weather.svg [0m- [0m- ms - -[0m
+[0mGET /favicon.ico [33m404 [0m1.489 ms - 1016[0m
+[0mGET / [36m304 [0m0.456 ms - -[0m
+[0mGET /style.css [36m304 [0m1.089 ms - -[0m
+[0mGET /img/weather.svg [36m304 [0m0.918 ms - -[0m
+[0mGET /favicon.ico [33m404 [0m0.755 ms - 1016[0m
+[0mGET / [32m200 [0m0.677 ms - 4153[0m
+[0mGET /favicon.ico [33m404 [0m1.169 ms - 1016[0m
+[0mGET /favicon.ico [33m404 [0m1.990 ms - 1016[0m
+[0mGET /favicon.ico [33m404 [0m1.365 ms - 1016[0m
+[0mGET / [32m200 [0m1.307 ms - 4153[0m
+[0mGET /favicon.ico [33m404 [0m1.662 ms - 1016[0m
+[0mGET / [32m200 [0m1.165 ms - 4153[0m
+[0mGET /favicon.ico [33m404 [0m0.803 ms - 1016[0m
+[0mGET / [32m200 [0m0.604 ms - 4153[0m
+[0mGET /style.css [32m200 [0m0.512 ms - 70[0m
+[0mGET /img/weather.svg [32m200 [0m0.499 ms - 1419[0m
+[0mGET /favicon.ico [33m404 [0m2.450 ms - 1016[0m
